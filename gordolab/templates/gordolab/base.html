@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gordolab</title>
+<!--Bootstrap css-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet"  href="{% static 'css/style.css' %}">
+ <body>
+<!--barra de navegación-->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top ">
+  <a class="navbar-brand" href="{% url 'gordolab:index'%}"><img src="{% static 'gordolab.png' %} " width="50">Gordolab</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-link active" href="{% url 'gordolab:gordofut'%}">Gordofut</a>
+      <a class="nav-link" href="{% url 'gordolab:quienessomos'%}">Quienes somos</a>
+    </div>
+  </div>
+</nav>
+
+<!--Contenido-->
+<main class="container">
+ <div class="pb-2 nb-2 border-bottom">
+     {% block page_header %}{% endblock page_header %}
+
+     {% block content %}
+     
+     
+
+     {% endblock content %}
+ </div>
+
+
+
+</main>
+
+<footer>
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-12 segment-one">
+          <h3>Redes</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis enim sed minima rerum ratione fugiat delectus possimus perspiciatis illo, officiis iusto omnis maiores odit nam soluta quidem aliquid ex. Fugit.</p>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12 segment-two">
+          <h3>Redes amigas</h3>
+          <ul>
+            <li><a href="#"></a>Evento</li>
+            <li><a href="#"></a>LA farra</li>
+            <li><a href="#"></a>Hattrick</li>
+            <li><a href="#"></a>Gordobeses</li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12 segment-three">
+          <h2>Follow us</h2>
+          <p>Please follo Lorem ipsum dolor sit amet consectetur adipisicing elit. In, doloribus eligendi? Animi numquam laborum, veritatis enim soluta officiis labore tenetur saepe commodi sunt culpa vitae esse! At aliquam facilis voluptas?
+            <a href="H"><i class="fa-fa-facebook"></a>
+
+          </p>
+        </div>
+
+
+        
+      </div>
+
+    </div>
+  </div>
+
+</footer>
+
+<!--jquery y demases-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+</html>
